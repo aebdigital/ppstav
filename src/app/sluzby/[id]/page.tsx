@@ -79,7 +79,72 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                         : "border-gray-200 hover:border-red-600 hover:text-red-600"
                     }`}
                   >
-                    <span className="font-medium">{s.title}</span>
+                    <div className="flex items-center gap-3">
+                      <div className="w-5 h-5 flex-shrink-0">
+                        {s.icon === "home" && (
+                          <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                          </svg>
+                        )}
+                        {s.icon === "bath" && (
+                          <Image
+                            src="/sources/bath_14107370.png"
+                            alt=""
+                            width={20}
+                            height={20}
+                            className="grayscale object-contain"
+                          />
+                        )}
+                        {s.icon === "lightning" && (
+                          <Image
+                            src="/sources/lightning_13764439.png"
+                            alt=""
+                            width={20}
+                            height={20}
+                            className="grayscale object-contain"
+                          />
+                        )}
+                        {s.icon === "bricks" && (
+                          <svg viewBox="0 0 24 24" fill="currentColor">
+                            <rect x="2" y="4" width="4" height="4" />
+                            <rect x="7" y="4" width="4" height="4" />
+                            <rect x="12" y="4" width="4" height="4" />
+                            <rect x="17" y="4" width="4" height="4" />
+                            <rect x="2" y="10" width="4" height="4" />
+                            <rect x="7" y="10" width="4" height="4" />
+                            <rect x="12" y="10" width="4" height="4" />
+                            <rect x="17" y="10" width="4" height="4" />
+                            <rect x="2" y="16" width="4" height="4" />
+                            <rect x="7" y="16" width="4" height="4" />
+                            <rect x="12" y="16" width="4" height="4" />
+                            <rect x="17" y="16" width="4" height="4" />
+                          </svg>
+                        )}
+                        {s.icon === "brush" && (
+                          <Image
+                            src="/sources/paint-brush_1825905.png"
+                            alt=""
+                            width={20}
+                            height={20}
+                            className="grayscale object-contain"
+                          />
+                        )}
+                        {s.icon === "door" && (
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                            <rect x="4" y="2" width="16" height="20" rx="1" />
+                            <rect x="6" y="4" width="12" height="8" rx="0.5" />
+                            <rect x="6" y="14" width="12" height="6" rx="0.5" />
+                            <circle cx="17" cy="17" r="1" fill="currentColor" />
+                          </svg>
+                        )}
+                        {s.icon === "trash" && (
+                          <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z" />
+                          </svg>
+                        )}
+                      </div>
+                      <span className="font-medium">{s.title}</span>
+                    </div>
                   </Link>
                 ))}
               </nav>

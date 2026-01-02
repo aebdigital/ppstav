@@ -352,7 +352,12 @@ export default function HomePage() {
       {/* Partners Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center mb-12">Naši partneri</h2>
+          <h2
+            className="text-3xl md:text-5xl font-bold mb-12 text-center"
+            data-text="Naši partneri"
+          >
+            Naši partneri
+          </h2>
           <div className="grid grid-cols-4 md:grid-cols-8 gap-8 items-center">
             {partners.map((partner, index) => (
               <div key={index} className="flex items-center justify-center">
