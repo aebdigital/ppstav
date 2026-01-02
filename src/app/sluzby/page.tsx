@@ -33,7 +33,7 @@ export default function SluzbyPage() {
           <div className="grid grid-cols-1 gap-8">
             {/* Main Content */}
             <div className="lg:col-span-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {services.map((service) => (
                   <Link key={service.id} href={`/sluzby/${service.id}`}>
                     <div className="service-card bg-white border border-gray-100 overflow-hidden group h-full">

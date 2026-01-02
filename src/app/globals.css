@@ -3,24 +3,220 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #DD1B1B;
+  --primary-dark: #b01515;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-montserrat);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-montserrat), Arial, Helvetica, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Hero gradient overlay for images */
+.hero-overlay {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+}
+
+/* Animation classes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+/* Section title text effects */
+.section-title {
+  position: relative;
+}
+
+.section-title::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.1);
+  z-index: -1;
+}
+
+/* Portfolio item hover effect */
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-item img {
+  transition: transform 0.5s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 2rem 1.5rem;
+  transform: translateY(0);
+}
+
+/* Service card hover */
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Partner logo grayscale */
+.partner-logo {
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.partner-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Blog post hover */
+.blog-post {
+  transition: box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Contact info item hover */
+.contact-info-item {
+  transition: transform 0.3s ease;
+}
+
+.contact-info-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Gallery grid responsive */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+/* Counter animation */
+@keyframes countUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Hero background animation */
+.hero-bg-image {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-bg-image.active {
+  opacity: 1;
+}
+
+/* Mobile menu transition */
+.mobile-menu {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Scroll progress indicator */
+#scroll-progress {
+  height: 0%;
+  background: #DD1B1B;
+  transition: height 0.1s linear;
+}
+
+/* Navbar link underline animation */
+.nav-link-underline::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: currentColor; /* Use the current text color */
+  transition: width 0.3s ease;
+}
+
+.nav-link-underline:hover::after,
+.nav-link-underline.active::after { /* Assuming 'active' class will be added by isActive logic */
+  width: 100%;
+  left: 0;
+  background: currentColor;
+  transition: width 0.3s ease;
 }
