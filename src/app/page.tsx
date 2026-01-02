@@ -3,13 +3,15 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { services } from "@/data/services";
 import { getFeaturedProjects } from "@/data/projects";
 import { heroImages, partners } from "@/data/contact";
 
 export default function HomePage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 1000], [0, -150]);
   const featuredProjects = getFeaturedProjects();
 
   useEffect(() => {
@@ -22,9 +24,12 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-screen min-h-[600px] flex items-center">
+      <section className="relative h-screen min-h-[600px] flex items-center overflow-hidden">
         {/* Background Images */}
-        <div className="absolute inset-0 z-0">
+        <motion.div 
+          className="absolute left-0 right-0 top-0 h-[120%] z-0"
+          style={{ y }}
+        >
           {heroImages.map((image, index) => (
             <div
               key={image}
@@ -42,7 +47,7 @@ export default function HomePage() {
             </div>
           ))}
           <div className="absolute inset-0 hero-overlay" />
-        </div>
+        </motion.div>
 
         {/* Hero Content */}
         <div className="container mx-auto px-4 relative z-10">
