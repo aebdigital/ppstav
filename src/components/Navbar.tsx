@@ -57,9 +57,9 @@ export default function Navbar() {
               <Image
                 src={isScrolled || isMobileMenuOpen ? "/sources/logo2.png" : "/sources/new.png"}
                 alt="P+P STAV"
-                width={150}
-                height={50}
-                className="h-12 w-auto"
+                width={180}
+                height={60}
+                className="h-16 w-auto"
                 priority
               />
             </Link>
@@ -70,7 +70,7 @@ export default function Navbar() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className={`nav-link-underline relative text-sm font-medium uppercase tracking-wider transition-colors duration-300 ${
+                    className={`nav-link-underline relative text-base font-medium uppercase tracking-wider transition-colors duration-300 ${
                       isActive(link.href) ? "active" : ""
                     } ${
                       isScrolled
