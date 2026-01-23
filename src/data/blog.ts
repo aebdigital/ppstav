@@ -5,115 +5,108 @@ export const blogPosts: BlogPost[] = [
     slug: "stavebny-zakon-2025",
     title: "6 najväčších zmien v stavebnom zákone v roku 2025",
     subtitle: "Nový stavebný zákon prináša revolučné zmeny v slovenskom stavebníctve",
-    excerpt: "Od 1. apríla 2025 vstúpil do platnosti nový stavebný zákon č. 25/2025 Z.z. Hlavnými cieľmi sú zníženie administratívnej záťaže, zjednodušenie a zrýchlenie povoľovacích procesov. Koniec behania po úradoch, digitalizácia stavebníctva a nová definícia drobných stavieb - to sú len niektoré z kľúčových zmien.",
+    excerpt: "Od 1. apríla 2025 vstúpil do platnosti nový stavebný zákon č. 25/2025 Z.z., ktorý nahradil pôvodný zákon z roku 1976. Hlavnými cieľmi sú zníženie administratívnej záťaže, zjednodušenie a zrýchlenie povoľovacích procesov a zvýšenie transparentnosti.",
     content: `
-## Nový stavebný zákon 2025
+Od 1. apríla 2025 vstúpil do platnosti nový stavebný zákon č. 25/2025 Z.z., ktorý nahradil pôvodný zákon z roku 1976. Ten aj napriek mnohým novelám už nezodpovedal súčasným požiadavkám a jeho nové znenie je tak na mieste. Hlavnými cieľmi sú zníženie administratívnej záťaže, zjednodušenie a zrýchlenie povoľovacích procesov a zvýšenie transparentnosti. Či už plánujete stavbu rodinného domu, rekonštrukciu bytu alebo postavenie chatky na záhrade, v tomto článku vám prehľadne vysvetlíme najdôležitejšie zmeny a povinnosti, ktoré vás čakajú.
 
-Od 1. apríla 2025 vstúpil do platnosti nový stavebný zákon č. 25/2025 Z.z. Hlavnými cieľmi sú zníženie administratívnej záťaže, zjednodušenie a zrýchlenie povoľovacích procesov.
+## 1. Koniec behania po úradoch
 
-### 1. Digitalizácia stavebníctva
-Koniec behania po úradoch! Všetky podania a komunikácia so stavebným úradom bude prebiehať elektronicky prostredníctvom nového informačného systému.
+Jednou z najvýraznejších zmien je zlúčenie územného a stavebného konania, to sa po novom volá konanie o stavebnom zámere. Do apríla bolo nutné najprv získať územné rozhodnutie a následne požiadať o stavebné povolenie. To znamenalo viac papierovania, návštev úradov a časové straty. U mnohých stavieb sa tak môže skrátiť celý proces z niekoľkých rokov na 30 dní.
 
-### 2. Nová definícia drobných stavieb
-Zákon rozširuje kategóriu drobných stavieb, ktoré nepotrebujú stavebné povolenie. Sem patria napríklad:
-- Prístrešky do 35 m²
-- Záhradné domčeky do 25 m²
-- Bazény do 40 m²
+## 2. Digitalizácia stavebníctva
 
-### 3. Rýchlejšie povoľovanie
-Lehoty na vybavenie žiadostí sa skrátia. Jednoduchšie stavby by mali byť povolené do 30 dní.
+S príchodom nového zákona vznikla povinnosť elektronického podávania žiadostí a archivácie projektovej dokumentácie v informačnom systéme Úradu pre územné plánovanie a výstavbu SR. Stavebník tak nahrá kompletnú dokumentáciu do online systému, kde sa dá jednoducho skontrolovať stav žiadosti.
 
-### 4. Zlúčenie konaní
-Viac konaní sa zlúči do jedného, čo urýchli celý proces získania povolenia.
+## 3. Nová definícia drobných stavieb
 
-### 5. Autorizovaní inšpektori
-Zavádza sa inštitút autorizovaných inšpektorov, ktorí môžu nahradiť niektoré úkony stavebného úradu.
+S novým stavebným zákonom sa spresnila definícia drobných stavieb. Po novom ide o prízemné stavby s maximálnou zastavanou plochou 50 m² a výškou 5 metrov. Ak sa plánovaná stavba nenachádza na verejnom priestranstve alebo menej ako 2 metre od susedného pozemku, odpadá nutnosť ohlasovania na stavebnom úrade. Typicky ide o záhradné domčeky, altánky, menšie bazény, fotovoltiku do 100 kW alebo garáže a prístrešky pre autá.
 
-### 6. Nové sankcie
-Za porušenie stavebného zákona hrozia vyššie pokuty, ale tiež možnosť dodatočného povolenia čiernych stavieb za určitých podmienok.
+## 4. Koniec dodatočnej legalizácie stavieb
+
+Od apríla sa sprísňuje posudzovanie nelegálne postavených stavieb. Stavby, ktoré boli postavené bez platného stavebného povolenia už nie je možné dodatočne zlegalizovať. Zodpovednosť za nelegálne stavby sa navyše rozšírila na zhotoviteľov, stavebný dozor a stavbyvedúcich. Týmto spôsobom sa v minulosti obchádzali povoľovacie procesy, po novom bude musieť byť čierna stavba odstránená.
+
+## 5. Fikcia súhlasu urýchlila schvaľovanie
+
+Zavedenie tzv. fikcie súhlasu bráni zbytočným prieťahom v povoľovacích procesoch. Pred aprílom 2025 mohol stavebník čakať na vyjadrenie úradu niekoľko mesiacov či rokov, bez možnosti účinne sa brániť. Ak sa úrad nevyjadrí k stavebnému zámeru v stanovenej lehote (60 - 90 dní, podľa typu stavby), automaticky sa považuje za odsúhlasený a môže začať stavať.
+
+## 6. Zodpovednosť všetkých zúčastnených
+
+Novým stavebným zákonom sa zvýšila zodpovednosť všetkých zúčastnených strán. To platí aj pre zhotoviteľov, stavbyvedúcich, projektantov, geodetov či statikov, ktorí musia v prípade chýb vykonať opravu na vlastné náklady a nie je možné vzdať sa zodpovednosti. Vďaka tomu by malo prísť k vyššej kvalite stavieb a zodpovednejšiemu prístupu všetkých zúčastnených.
+
+## Nová éra slovenského stavebníctva
+
+Nový stavebný zákon predstavuje revolučnú zmenu v slovenskom stavebníctve, ktorej úlohou je zjednodušiť, zrýchliť a stransparentniť výstavbu. Pre stavebníkov to znamená menej byrokracie, rýchlejšie vybavenie povolení a jasnejšie pravidlá. Pri stavbe je však dôležité striktne dodržiavať zákon, pretože neumožňuje dodatočnú legalizáciu stavieb.
+
+Plánujete stavbu alebo rekonštrukciu a potrebujete pomôcť so stavebným projektom? Radi vám pomôžeme s realizáciou vašich stavebných zámerov podľa nových pravidiel. Zavolajte nám alebo vyplňte kontaktný formulár a radi s vami prediskutujeme všetko potrebné.
     `,
     date: "19.8.2025",
     image: "/sources/newblog.jpg",
   },
   {
     slug: "stavebne-povolenie",
-    title: "Stavebné povolenie alebo ohlásenie? Neplaťte zbytočné pokuty",
-    subtitle: "Každá prestavba má podľa zákona svoje pravidlá.",
-    excerpt: "Ste si istí, že poznáte všetky vaše povinnosti, keď ste sa rozhodli zrekonštruovať dom alebo byt? Množstvo ľudí predpokladá, že na úpravy svojho bytu žiadne povolenie nepotrebujú. Ak však robíte väčšiu rekonštrukciu bez povolenia, hrozí vám pokuta. My vám radi poradíme, ako sa vyhnúť zbytočným problémom a porušeniu zákona.",
+    title: "Stavebné povolenie alebo ohlásenie?",
+    subtitle: "Neplaťte zbytočné pokuty",
+    excerpt: "Každá prestavba má podľa zákona svoje pravidlá. No ste si istí, že poznáte všetky vaše povinnosti, keď ste sa rozhodli zrekonštruovať dom alebo byt? Množstvo ľudí predpokladá, že na úpravy svojho bytu žiadne povolenie nepotrebujú. Ak však robíte väčšiu rekonštrukciu bez povolenia, hrozí vám pokuta.",
     content: `
-## Kedy potrebujete stavebné povolenie?
+Každá prestavba má podľa zákona svoje pravidlá. No ste si istí, že poznáte všetky vaše povinnosti, keď ste sa rozhodli zrekonštruovať dom alebo byt? Množstvo ľudí predpokladá, že na úpravy svojho bytu žiadne povolenie nepotrebujú. Ak však robíte väčšiu rekonštrukciu bez povolenia, hrozí vám pokuta. My vám radi vám poradíme, ako sa vyhnúť zbytočným problémom a porušeniu zákona.
 
-Stavebné povolenie je potrebné v týchto prípadoch:
-- Novostavby
-- Prístavby a nadstavby
-- Zmena účelu využitia budovy
-- Zásahy do nosných konštrukcií
+## Potrebujem stavebné povolenie?
 
-## Kedy stačí ohlásenie?
+Ešte pred začatím prác vám odporúčame zistiť si, či budete potrebovať stavebné povolenie. Podľa zákona ho budete potrebovať vždy, ak zasahujete do nosnej konštrukcie budovy. Tiež nemôže ovplyvňovať požiarnu bezpečnosť, vzhľad budovy a zasahovať do rozvodov elektriny plynu, vody alebo kúrenia. Stavebné povolenie budete potrebovať pri nadstavbe alebo prístavbe a nemôžete zabudnúť oň požiadať aj pri zasklievaní balkóna v paneláku.
 
-Ohlásenie postačuje pri:
-- Drobných stavbách (kôlne, altánky do 25 m²)
-- Stavebných úpravách, ktoré nezasahujú do nosných konštrukcií
-- Udržiavacích prácach
+## Ako je to s ohlásením rekonštrukcie?
 
-## Čo robiť bez povolenia?
+Ohlásenie stavebnému úradu sa riadi stavebným zákonom v § 55 ods. 2. Pokiaľ nezasahujete do nosných konštrukcií, nemeníte vzhľad domu, nemeníte rozvody a nebudete zasahovať do práv iných osôb, stačí vám len ohlásiť drobnú stavbu. V tomto prípade ide napríklad o práce ako výmena umakartového jadra za murované, výmena plávajúcich podláh, zmena kuchynskej linky alebo sa nemení spôsob užívania stavby.
 
-Bez akéhokoľvek povolenia môžete vykonávať:
-- Maľovanie a tapetovanie
-- Výmenu podláh (okrem zmeny konštrukcie)
-- Výmenu sanity
-- Výmenu okien (bez zmeny rozmerov)
+## Musím niečo oznamovať susedom?
 
-## Pokuty za čierne stavby
+Podľa zákona nemáte povinnosť oznámiť svojim susedom, že vo vašom byte bude prebiehať rekonštrukcia, no vzhľadom na budovanie dobrých vzťahov vám odporúčame ich o tom informovať napríklad prostredníctvom vytlačeného oznámenia, ktoré nalepíte na vchodové dvere. Ušetríte si tak množstvo nepríjemných pohľadov od nahnevaných susedov, ktorých bude obťažovať hluk a zvýšená prašnosť v bytovom dome. Tiež môžete vyvesiť schválené ohlásenie alebo stavebné povolenie.
 
-Za stavbu bez povolenia môže byť fyzická osoba pokutovaná do výšky 33 000 EUR. Pre právnické osoby môže pokuta dosiahnuť až 165 000 EUR.
+## Môžem rekonštruovať aj bez ohlásenia alebo stavebného povolenia?
 
-Ak máte pochybnosti, vždy sa poraďte so stavebným úradom alebo odborníkom. My vám radi pomôžeme zorientovať sa v stavebnej legislatíve.
+Pri určitých prácach nemusíte stavebnému úradu ohlasovať rekonštrukciu ani žiadať o stavebné povolenie. Ide najmä o udržiavacie práce na nehnuteľnosti:
+
+- opravy fasády, opravy a výmena strešnej krytiny
+- opravy a výmena vnútorných priečok, omietok, obkladov stien, podláh a dlažby, komínov, okien, dverí a schodišťových zábradlí
+- výmena klimatizačného zariadenia, výťahu, vykurovacích kotlov a telies a vnútorných rozvodov
+- maliarske a natieračské práce a pod.
+
+## Koľko ma to bude stáť?
+
+Za stavebné povolenie zaplatíte podľa rozsahu prác. Ohlásenie prerábky je bezplatné. V oboch prípadoch stavebný úrad rozhodne do 30 dní. Ak ste rekonštrukciu neohlásili, môžete dostať pokutu 331,94 €. Ak bolo potrebné stavebné povolenie, a nemáte ho, môžete dostať pokutu do 829,85 €.
+
+A stále neviete, či musíte žiadať o stavebné povolenie alebo ohlásiť rekonštrukciu domu alebo bytu, obráťte sa na odborníkov. Radi vám pomôžeme a odpovieme aj na vaše otázky.
     `,
     date: "2.1.2016",
     image: "/sources/blog/1.jpg",
   },
   {
     slug: "stresne-okna",
-    title: "Strešné okná pre Vaše podkrovia",
+    title: "Strešné okná pre vaše podkrovia",
     subtitle: "Zdravé svetlo pod strechou vášho domova",
     excerpt: "Vďaka novodobým možnostiam nie je problém vytvoriť z tmavej povaly nádherný obývateľný priestor. Aj tento kúsok obytnej plochy môže pôsobiť príjemne a sviežo. Už sa viac nemusíte obávať, že by ste vo vašom podkroví trpeli nedostatkom denného svetla a čerstvého vzduchu. Pomôžeme vám vybrať vhodné strešné okná značiek Velux a Fakro.",
     content: `
-## Prečo investovať do strešných okien?
+Vďaka novodobým možnostiam nie je problém vytvoriť z tmavej povaly nádherný obývateľný priestor. Aj tento kúsok obytnej plochy môže pôsobiť príjemne a sviežo. Už sa viac nemusíte obávať, že by ste vo vašom podkroví trpeli nedostatkom denného svetla a čerstvého vzduchu. Pomôžeme vám vybrať vhodné strešné okná značiek Velux a Fakro.
 
-Strešné okná prinášajú do podkrovných priestorov až o 40% viac svetla než klasické fasádne okná. Správne osvetlenie zlepšuje náladu, produktivitu a celkovú kvalitu života.
+## So strešnými oknami šetríte
 
-## Výber správneho strešného okna
+Dnešná doba neustále tlačí na znižovanie nákladov na spotrebovanú energiu. Na to by ste mali myslieť aj pri stavbe alebo rekonštrukcii podkrovia. Strešné okná Velux a Fakro ponúkajú možnosť finančne úsporných a tiež efektívnych riešení. Presklené plochy prinášajú do vášho domu prirodzené teplo najmä počas zimných mesiacov, čím šetríte výdavky na vykurovanie. Strešné okná Velux a Fakro disponujú najnovším systémom tepelnej izolácie, čím minimalizujú úniky tepla a prinesú vynikajúcu energetickú účinnosť. Izolačné dvojsklo alebo trojsklo je zárukou úspory energie a tiež poskytuje ochranu proti prehrievaniu a hluku.
 
-### Veľkosť okna
-Odporúčame, aby plocha okien tvorila minimálne 10% plochy podlahy miestnosti.
+## Vetrať aj so zatvoreným oknom? Všetko je možné
 
-### Typ zasklenia
-- Štandardné dvojsklo
-- Trojsklo pre lepšiu tepelnú izoláciu
-- Samočistiace sklo
+Prší či sneží a vy uvažujete, ako budete vetrať vaše podkrovie? Je veľmi dôležité, aby ste zabezpečili prevetrávanie celého priestoru. Žiadny problém. Vetranie na strešnom okne umožňuje pri akomkoľvek počasí ventilačná klapka, a vy tak môžete vetrať aj pri zatvorenom okne.
 
-### Ovládanie
-- Manuálne
-- Elektrické s diaľkovým ovládaním
-- Solárne (nepotrebujú elektrické vedenie)
+## Vyberte si správne strešné okná
 
-## Značky strešných okien
+Pri výbere okien pre vaše podkrovie ste určite uvažovali aj nad vikiermi. Ak však chcete, aby bol priestor pod strechou čo najsvetlejší, siahnite po strešných oknách. Je možné ich nainštalovať prakticky na každý druh strechy. Strešné okná by ste si mali vyberať podľa sklonu. Pre strmé strechy sú vhodné výkyvné okná. Dajú sa otáčať okolo stredového čapu až o 180°. Pri nižšom sklone strechy sa najčastejšie používajú výklopné okná. Otvárajú sa smerom von a neprekážajú v priestore. Všetky výhody oboch typov okien poskytujú výklopno-výkyvné okná. Cenovo sú však najnáročnejšie.
 
-### VELUX
-Prémiová kvalita s dlhoročnou tradíciou. Výborná tepelná izolácia a široký výber doplnkov.
+## Stanovte si rozpočet
 
-### FAKRO
-Poľský výrobca s vynikajúcim pomerom cena/výkon. Moderné dizajnové riešenia.
+Trh ponúka široké možnosti rôznych druhov strešných okien. Spoločnosti Velux a Fakro sledujú najnovšie trendy a neustále sa prispôsobujú požiadavkam zákazníkov. Ponuka výrobkov je naozaj pestrá a strešné okná si vyberú ľudia s obmedzeným rozpočtom, no i tí najnáročnejší. Okná su vysoko kvalitné a ponúkajú komfortné používanie, prispôsobia sa rozdielnym nárokom a rozpočtom domácností. Ku každému typu strešných okien môže zákazník vybrať z pestrého príslušenstva a rôznych doplnkov. Zo štedrej ponuky si isto vyberie každý.
 
-## Montáž strešných okien
+## Montáž strešných okien zverte do rúk odborníkom
 
-Správna montáž je kľúčová pre:
-- Tesnosť
-- Tepelnú izoláciu
-- Životnosť okna
-
-Naši skúsení odborníci vám pomôžu s výberom aj montážou strešných okien.
+Premeňte vaše podkrovie vďaka moderným strešným oknám na ekonomický atraktívny obytný či pracovný priestor. No nikdy nepodceňujte montáž strešných okien. Ak nemáte požadované technické zručnosti, uprednostnite inštaláciu profesionálnou firmou a vyškolenými odborníkmi. Obráťte sa na nás a na dlhoročné skúsenosti. Množstvo spokojných zákazníkov je zrkadlom kvalitne odvedenej práce.
     `,
     date: "2.1.2016",
     image: "/sources/blog/2.jpg",
@@ -121,43 +114,24 @@ Naši skúsení odborníci vám pomôžu s výberom aj montážou strešných ok
   {
     slug: "obklady-dlazby",
     title: "Správny výber obkladov a dlažieb",
-    subtitle: "Chceli by ste aj Vy exkluzívny obklad?",
+    subtitle: "Chceli by ste aj vy exkluzívny obklad?",
     excerpt: "Pri stavbe domu či rekonštrukcii bytu sa každý z vás dostane do bodu, kedy je potrebné vybrať správne obklady a dlažby. V každej predajni vás zavalia množstvom katalógov, v ktorých sa vynímajú nádherné kúpeľne, kuchyne a podlahy. No ako vybrať dlažbu a obklad tak, aby ohúrila a nestratila pritom svoju funkčnosť? Nebojte sa experimentov a nechajte si poradiť.",
     content: `
-## Ako vybrať správne obklady a dlažby?
+Pri stavbe domu či rekonštrukcii bytu sa každý z vás dostane do bodu, kedy je potrebné vybrať správne obklady a dlažby. V každej predajni vás zavalia množstvom katalógov, v ktorých sa vynímajú nádherné kúpeľne, kuchyne a podlahy. No ako vybrať dlažbu a obklad tak, aby ohúrila a nestratila pritom svoju funkčnosť? Nebojte sa experimentov a nechajte si poradiť.
 
-Výber obkladov a dlažieb je dôležitým rozhodnutím, ktoré ovplyvní vzhľad vášho domova na mnoho rokov.
+## Vyberte si ten správny obklad a dlažbu pre váš domov
 
-## Kritériá výberu
+Výber nie je jednoduchý a ovplyvňuje ho množstvo faktorov. Obklady sa líšia farbami, veľkosťou aj prevedením, a preto by ste mali zvoliť pre vašu kúpeľňu ten správny druh. To, čo vidíte v katalógu, sa nemusí vynímať vo vašej maličkej panelákovej kúpeľni. Naopak, veľkoplošné obklady môžu oživiť nádhernú priestrannú plochu kúpeľne v dome.
 
-### 1. Umiestnenie
-- **Kúpeľňa**: Protišmyková dlažba, odolnosť voči vlhkosti
-- **Kuchyňa**: Ľahká údržba, odolnosť voči mastnotám
-- **Chodba**: Vysoká odolnosť voči opotrebeniu
+Pri výbere vzoru či farby tiež myslite na umiestnenie obkladu. Na bielej dlažbe vidieť prach takmer neustále a ak tmavý lesklý obklad po sprchovaní ihneď neutriete, budú sa na ňom skvieť uschnuté kvapky vody. Bledé farby malú kúpeľňu opticky zväčšia, čím sa stane priestrannejšou a sviežou. Nebojte sa však ani tmavých obkladov, ktoré vyzerajú skutočne exkluzívne a moderne.
 
-### 2. Formát
-- Veľkoformátové dlaždice opticky zväčšujú priestor
-- Malé formáty sú vhodné pre členité povrchy
-- Obdĺžnikové formáty môžu predĺžiť miestnosť
+Pokiaľ si neviete predstaviť, ako by vaša kúpeľňa s vybraným obkladom vyzerala, nechajte si vypracovať vizualizáciu. Budete tak vidieť budúci vzhľad priestoru a dokážete sa jednoduchšie rozhodnúť. Profesionálne vyhotovenie však nechajte radšej na skúsených. Spoľahnite sa na odborné znalosti, ktoré dodajú vášmu interiéru nielen dokonalý, ale i funkčný vzhľad. Vyhnete sa tak zatekaniu, plesniveniu a podobným nepríjemnostiam.
 
-### 3. Farba a vzor
-- Svetlé farby zväčšujú priestor
-- Tmavé farby pôsobia elegantne, ale znečistenie je viditeľnejšie
-- Vzorované obklady ako výrazný prvok
+## Profesionálne pokladanie obkladov a dlažieb
 
-## Kvalita dlažby
+Nedbajte teda len na vzhľad, ale taktiež na správne položenie obkladov a dlažby. Nesprávne techniky ukladania, neznalosť materiálov či technológie montáže môže spôsobiť, že krásny drahý obklad stratí svoju príťažlivosť vďaka neodbornému vyhotoveniu. Montáž obkladov nie je jednoduchá záležitosť. Ak chcete, aby váš obklad vyzeral profesionálne a zároveň funkčne, obráťte sa radšej na profesionálov.
 
-### Triedy odolnosti
-- **PEI 1-2**: Kúpeľne, spálne
-- **PEI 3**: Obytné priestory
-- **PEI 4-5**: Chodby, komerčné priestory
-
-### Protišmykovosť
-- **R9**: Suché priestory
-- **R10-R11**: Kúpeľne
-- **R12-R13**: Exteriér, bazény
-
-Radi vám pomôžeme s výberom a profesionálnou pokládkou obkladov a dlažieb.
+Skúsenosti odborníkov sa vyplatia a vynaložené financie sa vám vrátia prostredníctvom kvalitne prevedenej práce a krásneho interiéru.
     `,
     date: "2.1.2016",
     image: "/sources/blog/3.jpg",
@@ -165,46 +139,36 @@ Radi vám pomôžeme s výberom a profesionálnou pokládkou obkladov a dlažieb
   {
     slug: "zateplenie",
     title: "Kvalitné zateplenie s profesionálmi",
-    subtitle: "Znížte úniky tepla z Vášho domova vďaka kvalitnému zatepleniu fasády",
-    excerpt: "Pri plánovaní stavby či rekonštrukcie už existujúcej budovy je nesmierne dôležité dbať na správny návrh a realizáciu zateplenia fasády. Niet pochýb o tom, že správnou izoláciou objektu zabránime úniku tepla z interiéru. Mohli by sme však diskutovať o kvalite, systéme, hrúbke a rôznych typoch použitých materiálov pri izolácii fasády. Zateplenie vám môže tiež pomôcť ušetriť podstatné množstvo nákladov vynaložených na kúrenie v zime a klimatizáciu v lete.",
+    subtitle: "Znížte úniky tepla z vášho domova vďaka kvalitnému zatepleniu fasády",
+    excerpt: "Pri plánovaní stavby či rekonštrukcie už existujúcej budovy je nesmierne dôležité dbať na správny návrh a realizáciu zateplenia fasády. Niet pochýb o tom, že správnou izoláciou objektu zabránime úniku tepla z interiéru. Zateplenie vám môže tiež pomôcť ušetriť podstatné množstvo nákladov vynaložených na kúrenie v zime a klimatizáciu v lete.",
     content: `
-## Prečo zatepliť dom?
+Pri plánovaní stavby či rekonštrukcie už existujúcej budovy je nesmierne dôležité dbať na správny návrh a realizáciu zateplenia fasády. Niet pochýb o tom, že správnou izoláciou objektu zabránime úniku tepla z interiéru. Mohli by sme však diskutovať o kvalite, systéme, hrúbke a rôznych typoch použitých materiálov pri izolácii fasády. Zateplenie vám môže tiež pomôcť ušetriť podstatné množstvo nákladov vynaložených na kúrenie v zime a klimatizáciu v lete.
 
-Zateplenie fasády prináša množstvo výhod:
-- Úspora energie až 40%
-- Zvýšenie komfortu bývania
-- Ochrana konštrukcie pred poveternostnými vplyvmi
-- Zhodnotenie nehnuteľnosti
+## Tepelné mosty alebo kadiaľ nám unikajú peniaze
 
-## Materiály na zateplenie
+Pri väčšine starších domov hovoríme o energetickej neefektívnosti. Vaše účty za energie sú veľmi vysoké a komfort vášho bývania sa časom znižuje. Vznikajú plesne, rosia sa vám okná alebo bojujete s rôznymi inými problémami spojenými s vlhkosťou objektu?
 
-### Polystyrén (EPS)
-- Najrozšírenejší materiál
-- Výborný pomer cena/výkon
-- Hrúbky od 5 do 30 cm
+Vďaka modernizácii je však možné dosiahnuť vysoký štandard bývania aj v staršom dome či byte. Náklady na energie ste schopní priblížiť čo najbližšie k nízkoenergetickej stavbe. V tomto momente je však dôležité vedieť identifikovať riziká a problémy, ktorých sa potrebujete zbaviť.
 
-### Minerálna vlna
-- Lepšie akustické vlastnosti
-- Paropriepustná
-- Nehorľavá
+Pre určenie slabostí budovy, ktorú chcete zatepliť, môžeme využiť termovíziu. Na snímkach z termovízie je jasne vidieť, prostredníctvom ktorých miest uniká z vášho interiéru najviac tepla. Tieto miesta nazývame tepelné mosty.
 
-### PIR/PUR panely
-- Najlepšie izolačné vlastnosti
-- Tenšia hrúbka pri rovnakej izolácii
-- Vyššia cena
+Tepelné mosty sa najčastejšie nachádzajú v miestach, kde sa spájajú jednotlivé vrstvy stavebnej konštrukcie.
 
-## Hrúbka zateplenia
+Ide najmä o:
 
-Odporúčané hrúbky pre rodinné domy:
-- **Steny**: 15-20 cm
-- **Strecha**: 25-35 cm
-- **Podlaha**: 10-15 cm
+- základy
+- terasa
+- balkóny
+- okná
+- strešné okná
+- strecha
+- veniec
 
-## Zateplenie a dotácie
+## Keď izolovať, tak skutočne dôkladne
 
-Informujte sa o aktuálnych dotáciách na zateplenie rodinných domov. Štát pravidelne podporuje energeticky úsporné opatrenia.
+Energeticky úsporný dom alebo byt je založený na detailoch. Tepelná izolácia objektu musí tvoriť jednu súvislú vrstvu bez akéhokoľvek prerušenia. Je potrebné zatepliť všetky miesta dôkladne - znížiť tak únik tepla cez tepelné mosty. Nesprávnym prevedením môžete zbytočne prísť o peniaze vďaka zvýšeným nákladom na energiu.
 
-Kontaktujte nás pre nezáväznú konzultáciu a cenovú ponuku na zateplenie vášho domu.
+Nikdy nešetrite na kvalitných materiáloch a profesionálne vyhotovenej práci. Ak si na takúto obrovskú rekonštrukciu netrúfate, obráťte sa radšej na profesionálov a zverte váš domov do rúk odborníkov.
     `,
     date: "2.1.2016",
     image: "/sources/blog/4.jpg",

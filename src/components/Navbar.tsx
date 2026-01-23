@@ -22,6 +22,7 @@ export default function Navbar() {
   const navLinks = [
     { href: "/", label: "Domov" },
     { href: "/sluzby", label: "Služby" },
+    { href: "/jadro-na-kluc", label: "Jadro na kľúč" },
     { href: "/referencie", label: "Projekty" },
     { href: "/blog", label: "Blog" },
     { href: "/kontakt", label: "Kontakt" },

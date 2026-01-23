@@ -1,15 +1,79 @@
-import { Metadata } from "next";
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import { contactInfo } from "@/data/contact";
-
-export const metadata: Metadata = {
-  title: "Kontakt - P+P STAV",
-  description: "Kontaktujte nás pre nezáväznú cenovú ponuku na rekonštrukciu bytu alebo domu",
-};
+import SuccessModal from "@/components/SuccessModal";
 
 export default function KontaktPage() {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    subject: "",
+    message: "",
+    consent: false,
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) => {
+    const { name, value, type } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]:
+        type === "checkbox" ? (e.target as HTMLInputElement).checked : value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError(null);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          formType: "contact",
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setShowModal(true);
+        setFormData({
+          name: "",
+          phone: "",
+          email: "",
+          subject: "",
+          message: "",
+          consent: false,
+        });
+      } else {
+        setError(result.message || "Nastala chyba pri odosielaní.");
+      }
+    } catch {
+      setError("Nastala chyba pri odosielaní. Skúste prosím neskôr.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <>
+      <SuccessModal isOpen={showModal} onClose={() => setShowModal(false)} />
+
       {/* Hero Section */}
       <section
         className="relative h-[30vh] min-h-[200px] flex items-center justify-center"
@@ -33,8 +97,8 @@ export default function KontaktPage() {
             <div>
               <h2 className="text-3xl font-bold mb-8">Spojte sa s nami</h2>
               <p className="text-gray-600 mb-8">
-                Máte otázky alebo potrebujete cenovú ponuku? Neváhajte nás kontaktovať.
-                Radi vám pomôžeme s vašou rekonštrukciou.
+                Máte otázky alebo potrebujete cenovú ponuku? Neváhajte nás
+                kontaktovať. Radi vám pomôžeme s vašou rekonštrukciou.
               </p>
 
               <div className="space-y-6">
@@ -221,29 +285,39 @@ export default function KontaktPage() {
             {/* Contact Form */}
             <div className="bg-gray-50 p-8 rounded-lg shadow-xl">
               <h2 className="text-3xl font-bold mb-8">Napíšte nám</h2>
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Meno a priezvisko *
                     </label>
                     <input
                       type="text"
                       id="name"
                       name="name"
+                      value={formData.name}
+                      onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
                       placeholder="Vaše meno"
                     />
                   </div>
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Telefón *
                     </label>
                     <input
                       type="tel"
                       id="phone"
                       name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
                       placeholder="+421 XXX XXX XXX"
@@ -252,13 +326,18 @@ export default function KontaktPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     E-mail *
                   </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
                     placeholder="vas@email.sk"
@@ -266,34 +345,56 @@ export default function KontaktPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Predmet
                   </label>
                   <select
                     id="subject"
                     name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
                   >
                     <option value="">Vyberte predmet</option>
-                    <option value="kompletna-rekonstrukcia">Kompletná rekonštrukcia bytov</option>
-                    <option value="kupelne-jadra">Rekonštrukcia kúpeľní a bytových jadier</option>
-                    <option value="elektro-vodo-plyn">Elektrina, voda a plyn</option>
-                    <option value="murarske-stavebne">Murárske a stavebné práce</option>
-                    <option value="malovanie-obklady">Maľovanie, obklady a podlahy</option>
+                    <option value="kompletna-rekonstrukcia">
+                      Kompletná rekonštrukcia bytov
+                    </option>
+                    <option value="kupelne-jadra">
+                      Rekonštrukcia kúpeľní a bytových jadier
+                    </option>
+                    <option value="elektro-vodo-plyn">
+                      Elektrina, voda a plyn
+                    </option>
+                    <option value="murarske-stavebne">
+                      Murárske a stavebné práce
+                    </option>
+                    <option value="malovanie-obklady">
+                      Maľovanie, obklady a podlahy
+                    </option>
                     <option value="montaz-dveri">Montáž dverí a zariadení</option>
-                    <option value="upratovanie-odvoz">Upratovanie a odvoz odpadu</option>
+                    <option value="upratovanie-odvoz">
+                      Upratovanie a odvoz odpadu
+                    </option>
                     <option value="ine">Iné</option>
                   </select>
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Správa *
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     rows={5}
+                    value={formData.message}
+                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent resize-none"
                     placeholder="Popíšte váš projekt..."
@@ -305,23 +406,35 @@ export default function KontaktPage() {
                     type="checkbox"
                     id="consent"
                     name="consent"
+                    checked={formData.consent}
+                    onChange={handleChange}
                     required
                     className="mt-1"
                   />
                   <label htmlFor="consent" className="text-sm text-gray-600">
                     Súhlasím so spracovaním osobných údajov v súlade s{" "}
-                    <Link href="#" className="text-red-600 hover:underline">
+                    <Link
+                      href="/ochrana-osobnych-udajov"
+                      className="text-red-600 hover:underline"
+                    >
                       ochranou osobných údajov
                     </Link>
                     . *
                   </label>
                 </div>
 
+                {error && (
+                  <div className="p-4 bg-red-100 text-red-800 border border-red-200">
+                    {error}
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full bg-red-600 hover:bg-red-700 text-white px-8 py-4 font-semibold uppercase tracking-wider transition-colors"
+                  disabled={isSubmitting}
+                  className="w-full bg-red-600 hover:bg-red-700 disabled:bg-red-400 text-white px-8 py-4 font-semibold uppercase tracking-wider transition-colors"
                 >
-                  Odoslať správu
+                  {isSubmitting ? "Odosiela sa..." : "Odoslať správu"}
                 </button>
               </form>
             </div>

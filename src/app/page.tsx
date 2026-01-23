@@ -156,7 +156,7 @@ export default function HomePage() {
               </Link>
             </motion.div>
 
-            {/* Right - Image with Stats */}
+            {/* Right - Image */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -166,23 +166,11 @@ export default function HomePage() {
             >
               <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
                 <Image
-                  src="/sources/portfolio/7.jpeg"
-                  alt="P+P STAV stavebná spoločnosť"
+                  src="/sources/services/rekonstrukcia.jpeg"
+                  alt="Rekonštrukcia bytu"
                   fill
                   className="object-cover"
                 />
-              </div>
-              <div className="absolute -bottom-4 -left-4 md:-bottom-8 md:-left-8 flex gap-2 md:gap-4">
-                <div className="bg-gray-900 text-white p-3 md:p-6 rounded-lg">
-                  <div className="text-xl md:text-3xl font-bold">
-                    100<span className="text-red-500">+</span>
-                  </div>
-                  <div className="text-xs md:text-sm">Úspešných projektov</div>
-                </div>
-                <div className="bg-yellow-400 text-gray-900 p-3 md:p-6 rounded-lg">
-                  <div className="text-xl md:text-3xl font-bold">22</div>
-                  <div className="text-xs md:text-sm">rokov skúseností</div>
-                </div>
               </div>
             </motion.div>
           </div>
