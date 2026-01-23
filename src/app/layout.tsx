@@ -74,6 +74,8 @@ export default function RootLayout({
   return (
     <html lang="sk">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-SF1J2S8PM8"
           strategy="afterInteractive"
