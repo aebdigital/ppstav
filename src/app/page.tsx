@@ -204,81 +204,95 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Link href={`/sluzby/${service.id}`} className="block h-full">
-                  <div className="service-card bg-white p-6 h-full border border-gray-100 hover:border-red-600 flex flex-col">
-                    <div className="text-red-600 text-4xl font-bold mb-4">
-                      {service.number}.
+                <Link href={`/sluzby/${service.id}`} className="block h-full group">
+                  <div className="service-card bg-white p-6 h-full border border-gray-100 group-hover:border-red-600 flex flex-col relative overflow-hidden">
+                    {/* Background image on hover */}
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        className="object-cover"
+                      />
+                      <div className="absolute inset-0 bg-black/70" />
                     </div>
-                    <div className="w-12 h-12 text-gray-900 mb-4">
-                      {service.icon === "home" && (
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-                        </svg>
-                      )}
-                      {service.icon === "bath" && (
-                        <Image
-                          src="/sources/bath_14107370.png"
-                          alt={service.title}
-                          width={48}
-                          height={48}
-                          className="grayscale"
-                        />
-                      )}
-                      {service.icon === "lightning" && (
-                        <Image
-                          src="/sources/lightning_13764439.png"
-                          alt={service.title}
-                          width={48}
-                          height={48}
-                          className="grayscale"
-                        />
-                      )}
-                      {service.icon === "bricks" && (
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                          <rect x="2" y="4" width="4" height="4" />
-                          <rect x="7" y="4" width="4" height="4" />
-                          <rect x="12" y="4" width="4" height="4" />
-                          <rect x="17" y="4" width="4" height="4" />
-                          <rect x="2" y="10" width="4" height="4" />
-                          <rect x="7" y="10" width="4" height="4" />
-                          <rect x="12" y="10" width="4" height="4" />
-                          <rect x="17" y="10" width="4" height="4" />
-                          <rect x="2" y="16" width="4" height="4" />
-                          <rect x="7" y="16" width="4" height="4" />
-                          <rect x="12" y="16" width="4" height="4" />
-                          <rect x="17" y="16" width="4" height="4" />
-                        </svg>
-                      )}
-                      {service.icon === "brush" && (
-                        <Image
-                          src="/sources/paint-brush_1825905.png"
-                          alt={service.title}
-                          width={48}
-                          height={48}
-                          className="grayscale"
-                        />
-                      )}
-                      {service.icon === "door" && (
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                          <rect x="4" y="2" width="16" height="20" rx="1" />
-                          <rect x="6" y="4" width="12" height="8" rx="0.5" />
-                          <rect x="6" y="14" width="12" height="6" rx="0.5" />
-                          <circle cx="17" cy="17" r="1" fill="currentColor" />
-                        </svg>
-                      )}
-                      {service.icon === "trash" && (
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z" />
-                        </svg>
-                      )}
+
+                    {/* Content */}
+                    <div className="relative z-10">
+                      <div className="text-red-600 text-4xl font-bold mb-4">
+                        {service.number}.
+                      </div>
+                      <div className="w-12 h-12 text-gray-900 group-hover:text-white mb-4 transition-colors">
+                        {service.icon === "home" && (
+                          <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                          </svg>
+                        )}
+                        {service.icon === "bath" && (
+                          <Image
+                            src="/sources/bath_14107370.png"
+                            alt={service.title}
+                            width={48}
+                            height={48}
+                            className="grayscale group-hover:brightness-0 group-hover:invert transition-all"
+                          />
+                        )}
+                        {service.icon === "lightning" && (
+                          <Image
+                            src="/sources/lightning_13764439.png"
+                            alt={service.title}
+                            width={48}
+                            height={48}
+                            className="grayscale group-hover:brightness-0 group-hover:invert transition-all"
+                          />
+                        )}
+                        {service.icon === "bricks" && (
+                          <svg viewBox="0 0 24 24" fill="currentColor">
+                            <rect x="2" y="4" width="4" height="4" />
+                            <rect x="7" y="4" width="4" height="4" />
+                            <rect x="12" y="4" width="4" height="4" />
+                            <rect x="17" y="4" width="4" height="4" />
+                            <rect x="2" y="10" width="4" height="4" />
+                            <rect x="7" y="10" width="4" height="4" />
+                            <rect x="12" y="10" width="4" height="4" />
+                            <rect x="17" y="10" width="4" height="4" />
+                            <rect x="2" y="16" width="4" height="4" />
+                            <rect x="7" y="16" width="4" height="4" />
+                            <rect x="12" y="16" width="4" height="4" />
+                            <rect x="17" y="16" width="4" height="4" />
+                          </svg>
+                        )}
+                        {service.icon === "brush" && (
+                          <Image
+                            src="/sources/paint-brush_1825905.png"
+                            alt={service.title}
+                            width={48}
+                            height={48}
+                            className="grayscale group-hover:brightness-0 group-hover:invert transition-all"
+                          />
+                        )}
+                        {service.icon === "door" && (
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                            <rect x="4" y="2" width="16" height="20" rx="1" />
+                            <rect x="6" y="4" width="12" height="8" rx="0.5" />
+                            <rect x="6" y="14" width="12" height="6" rx="0.5" />
+                            <circle cx="17" cy="17" r="1" fill="currentColor" />
+                          </svg>
+                        )}
+                        {service.icon === "trash" && (
+                          <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z" />
+                          </svg>
+                        )}
+                      </div>
+                      <h3 className="text-xl font-semibold mb-3 group-hover:text-white transition-colors">
+                        {service.title}
+                      </h3>
+                      <p className="text-gray-600 group-hover:text-gray-200 text-sm mb-4 flex-grow transition-colors">
+                        {service.shortDescription}
+                      </p>
                     </div>
-                    <h3 className="text-xl font-semibold mb-3">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm mb-4 flex-grow">
-                      {service.shortDescription}
-                    </p>
-                    <span className="block w-full text-center py-3 border border-gray-900 text-gray-900 font-medium text-sm uppercase tracking-wider hover:bg-red-600 hover:text-white hover:border-red-600 transition-colors">
+                    <span className="relative z-10 block w-full text-center py-3 border border-gray-900 text-gray-900 font-medium text-sm uppercase tracking-wider group-hover:border-white group-hover:text-white hover:!bg-red-600 hover:!border-red-600 hover:!text-white transition-colors">
                       Zobraziť viac
                     </span>
                   </div>
