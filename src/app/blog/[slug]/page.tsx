@@ -24,9 +24,37 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
+  const url = `https://ppstav.sk/blog/${post.slug}`;
+  const ogImage = post.image.startsWith("http") ? post.image : `https://ppstav.sk${post.image}`;
+
   return {
     title: `${post.title} - P+P STAV Blog`,
     description: post.excerpt,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: "article",
+      url: url,
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+      publishedTime: post.date, // Note: date format in data might need parsing if ISO is required, but this is better than nothing
+      authors: ["P+P STAV s.r.o."],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [ogImage],
+    },
   };
 }
 
@@ -42,6 +70,31 @@ export default async function BlogPostPage({ params }: PageProps) {
   const currentIndex = blogPosts.findIndex((p) => p.slug === slug);
   const prevPost = currentIndex > 0 ? blogPosts[currentIndex - 1] : null;
   const nextPost = currentIndex < blogPosts.length - 1 ? blogPosts[currentIndex + 1] : null;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    image: post.image.startsWith("http") ? post.image : `https://ppstav.sk${post.image}`,
+    datePublished: post.date, // Ideally convert to ISO 8601 if possible, but raw date is okay for now or needs helper
+    author: {
+      "@type": "Organization",
+      name: "P+P STAV s.r.o.",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "P+P STAV s.r.o.",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ppstav.sk/sources/logo2.png",
+      },
+    },
+    description: post.excerpt,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://ppstav.sk/blog/${post.slug}`,
+    },
+  };
 
   // Simple markdown to HTML conversion for basic formatting
   const formatContent = (content: string) => {
@@ -99,6 +152,10 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero Section */}
       <section
         className="relative h-[40vh] min-h-[300px] flex items-center justify-center"

@@ -30,9 +30,20 @@ export const metadata: Metadata = {
     "bytové jadrá",
     "P+P STAV",
     "Trenčín",
+    "rekonštrukcia domu",
+    "zateplenie",
+    "obklady a dlažby",
+    "sadrokartón",
+    "Trenčiansky kraj",
+    "stavebná firma Trenčín",
+    "rekonštrukcia na kľúč",
   ],
   authors: [{ name: "P+P STAV s.r.o." }],
   creator: "P+P STAV s.r.o.",
+  metadataBase: new URL("https://ppstav.sk"),
+  alternates: {
+    canonical: "./",
+  },
   openGraph: {
     type: "website",
     locale: "sk_SK",
@@ -43,7 +54,7 @@ export const metadata: Metadata = {
       "Profesionálne stavebné práce, kompletné rekonštrukcie bytov, kúpeľní, bytových jadier. Kvalitné murárske, elektrikárske a inštalatérske práce na kľúč.",
     images: [
       {
-        url: "https://ppstav.sk/sources/portfolio/7.jpeg",
+        url: "/sources/portfolio/7.jpeg",
         width: 1200,
         height: 630,
         alt: "P+P STAV s.r.o.",
@@ -55,11 +66,18 @@ export const metadata: Metadata = {
     title: "P+P STAV s.r.o. - Profesionálne stavebné práce a rekonštrukcie",
     description:
       "Profesionálne stavebné práce, kompletné rekonštrukcie bytov, kúpeľní, bytových jadier. Kvalitné murárske, elektrikárske a inštalatérske práce na kľúč.",
-    images: ["https://ppstav.sk/sources/portfolio/7.jpeg"],
+    images: ["/sources/portfolio/7.jpeg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   icons: {
     icon: "/favicon.ico",
@@ -71,6 +89,34 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "GeneralContractor",
+    name: "P+P STAV s.r.o.",
+    image: "https://ppstav.sk/sources/logo2.png",
+    url: "https://ppstav.sk",
+    telephone: "+421 903 753 882",
+    email: "pavolporuban@ppstav.sk",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Trenčianska Turná 515",
+      addressLocality: "Trenčianska Turná",
+      postalCode: "913 21",
+      addressCountry: "SK",
+    },
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "16:00",
+    },
+    sameAs: [
+      "https://www.facebook.com/ppstavsk",
+      "https://www.instagram.com/ppstav_poruban/",
+      "https://www.tiktok.com/@ppstav",
+    ],
+  };
+
   return (
     <html lang="sk">
       <head>
@@ -88,6 +134,10 @@ export default function RootLayout({
             gtag('config', 'G-SF1J2S8PM8');
           `}
         </Script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body className={`${montserrat.variable} font-sans antialiased`}>
         <SmoothScroll>

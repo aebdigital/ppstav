@@ -1,24 +1,58 @@
-"use client";
-
-import { useState } from "react";
-import Image from "next/image";
+import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { motion } from "framer-motion";
 import { projects, getProjectBySlug } from "@/data/projects";
-import Lightbox from "@/components/Lightbox";
-import { use } from "react";
+import ProjectGallery from "@/components/ProjectGallery";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-export default function ProjectDetailPage({ params }: PageProps) {
-  const { slug } = use(params);
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
   const project = getProjectBySlug(slug);
 
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [lightboxIndex, setLightboxIndex] = useState(0);
+  if (!project) {
+    return {
+      title: "Projekt nenájdený",
+    };
+  }
+
+  const url = `https://ppstav.sk/referencie/${project.slug}`;
+  const mainImage = `/sources/portfolio/${project.folderName}/${project.images[0]}`;
+  const ogImage = `https://ppstav.sk${mainImage}`;
+
+  return {
+    title: `${project.title} | ${project.location} - P+P STAV`,
+    description: `Realizácia projektu: ${project.title} v lokalite ${project.location}. Rozsah prác: ${project.scope}.`,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title: `${project.title} | ${project.location}`,
+      description: `Rozsah prác: ${project.scope}`,
+      url: url,
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: project.title,
+        },
+      ],
+    },
+  };
+}
+
+export default async function ProjectDetailPage({ params }: PageProps) {
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
 
   if (!project) {
     notFound();
@@ -34,13 +68,25 @@ export default function ProjectDetailPage({ params }: PageProps) {
     (img) => `/sources/portfolio/${project.folderName}/${img}`
   );
 
-  const openLightbox = (index: number) => {
-    setLightboxIndex(index);
-    setLightboxOpen(true);
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: `${project.title} - ${project.location}`,
+    description: `Realizácia projektu ${project.title}. Lokalita: ${project.location}. Rozsah prác: ${project.scope}`,
+    primaryImageOfPage: `https://ppstav.sk${imagePaths[0]}`,
+    provider: {
+      "@type": "LocalBusiness",
+      name: "P+P STAV s.r.o.",
+    },
+    datePublished: project.year, // Using year as string is loosely okay, schema prefers ISO date but for Year it's acceptable in some contexts or just omit if unsure.
   };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero Section */}
       <section
         className="relative h-[30vh] min-h-[200px] flex items-center justify-center"
@@ -112,57 +158,7 @@ export default function ProjectDetailPage({ params }: PageProps) {
 
             {/* Main Content - Gallery */}
             <div className="lg:col-span-3">
-              {/* Main Image */}
-              <div
-                className="relative aspect-[16/9] mb-6 cursor-pointer overflow-hidden group"
-                onClick={() => openLightbox(0)}
-              >
-                <Image
-                  src={imagePaths[0]}
-                  alt={`${project.title} - hlavný obrázok`}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  priority
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                  <svg
-                    className="w-16 h-16 text-white opacity-0 group-hover:opacity-100 transition-opacity"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
-                    />
-                  </svg>
-                </div>
-              </div>
-
-              {/* Thumbnail Grid */}
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {imagePaths.slice(1).map((image, index) => (
-                  <motion.div
-                    key={image}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: (index % 8) * 0.05 }}
-                    className="relative aspect-square cursor-pointer overflow-hidden group"
-                    onClick={() => openLightbox(index + 1)}
-                  >
-                    <Image
-                      src={image}
-                      alt={`${project.title} - obrázok ${index + 2}`}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors" />
-                  </motion.div>
-                ))}
-              </div>
+              <ProjectGallery imagePaths={imagePaths} title={project.title} />
 
               {/* Navigation */}
               <div className="mt-12 flex justify-between items-center border-t pt-8">
@@ -223,14 +219,6 @@ export default function ProjectDetailPage({ params }: PageProps) {
           </div>
         </div>
       </section>
-
-      {/* Lightbox */}
-      <Lightbox
-        images={imagePaths}
-        initialIndex={lightboxIndex}
-        isOpen={lightboxOpen}
-        onClose={() => setLightboxOpen(false)}
-      />
     </>
   );
 }

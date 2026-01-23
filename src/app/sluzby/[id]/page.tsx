@@ -24,9 +24,28 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
+  const url = `https://ppstav.sk/sluzby/${service.id}`;
+  const ogImage = service.image.startsWith("http") ? service.image : `https://ppstav.sk${service.image}`;
+
   return {
     title: `${service.title} - P+P STAV`,
     description: service.shortDescription,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title: `${service.title} - P+P STAV`,
+      description: service.shortDescription,
+      url: url,
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: service.title,
+        },
+      ],
+    },
   };
 }
 
@@ -38,6 +57,22 @@ export default async function ServiceDetailPage({ params }: PageProps) {
     notFound();
   }
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: service.title,
+    provider: {
+      "@type": "LocalBusiness",
+      name: "P+P STAV s.r.o.",
+    },
+    description: service.shortDescription,
+    image: service.image.startsWith("http") ? service.image : `https://ppstav.sk${service.image}`,
+    areaServed: {
+      "@type": "City",
+      name: "Trenčín",
+    },
+  };
+
   // Find current index and adjacent services
   const currentIndex = services.findIndex((s) => s.id === id);
   const prevService = currentIndex > 0 ? services[currentIndex - 1] : null;
@@ -45,6 +80,10 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero Section */}
       <section
         className="relative h-[40vh] min-h-[300px] flex items-center justify-center"
