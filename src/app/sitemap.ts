@@ -13,7 +13,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/sluzby",
     "/referencie",
     "/blog",
-    "/jadro-na-kluc",
     "/ochrana-osobnych-udajov",
   ].map((route) => ({
     url: `${BASE_URL}${route}`,
