@@ -256,7 +256,7 @@ export const projects: Project[] = [
     location: "Trenčianske Jastrabie",
     year: "2015",
     scope: "búracie práce, murárske práce, vodoinštalácia, elektroinštalácia, nalepenie obkladov, pokládka dlažby, maliarske práce, sadrokartonárske práce, montáž sanitárneho vybavenia",
-    images: ["HLAVNA.jpg", ...Array.from({ length: 4 }, (_, i) => `${i + 1}.jpg`)],
+    images: ["4.jpg", "HLAVNA.jpg", ...Array.from({ length: 3 }, (_, i) => `${i + 1}.jpg`)],
     imageCount: 4,
   },
   {
@@ -277,7 +277,7 @@ export const projects: Project[] = [
     location: "Trenčín - Juh",
     year: "2014",
     scope: "demontáž bytového jadra, pokládka laminátovej podlahy, vymurovanie jadra, vodoinštalácia, elektroinštalácia, nalepenie obkladov a dlažieb, omietky, maliarske práce, zníženie stropov sadrokartónom, osadenie sanitárneho vybavenia, montáž obložkových zárubní",
-    images: ["HLAVNA.jpg", ...Array.from({ length: 14 }, (_, i) => `${i + 1}.jpg`)],
+    images: ["14.jpg", "HLAVNA.jpg", ...Array.from({ length: 13 }, (_, i) => `${i + 1}.jpg`)],
     imageCount: 14,
   },
   {
@@ -287,7 +287,7 @@ export const projects: Project[] = [
     location: "Ivanovce",
     year: "2014",
     scope: "búracie práce, murárske práce, vodoinštalácia, elektroinštalácia, obklady, dlažby, sadrokartónové priečky, maľovka, osadenie sanitárneho vybavenia, zhotovenie sprchovacieho kúta, pokládka laminátovej podlahy, výmena okna",
-    images: ["HLAVNA.jpg", ...Array.from({ length: 13 }, (_, i) => `${i + 1}.jpg`)],
+    images: ["13.jpg", "HLAVNA.jpg", ...Array.from({ length: 12 }, (_, i) => `${i + 1}.jpg`)],
     imageCount: 13,
   },
   {
@@ -318,7 +318,7 @@ export const projects: Project[] = [
     location: "Trenčín - Juh",
     year: "2013",
     scope: "demontáž jadra, nivelovanie podláh, murárske práce, vodoinštalácia, elektroinštalácia, nalepenie obkladov, pokládka dlažby, osadenie sanitárneho vybavenia, práce zo sadrokartónu, maliarske práce",
-    images: ["HLAVNA.jpg", ...Array.from({ length: 11 }, (_, i) => `${String(i + 1).padStart(2, "0")}.jpg`)],
+    images: ["11.jpg", "HLAVNA.jpg", ...Array.from({ length: 10 }, (_, i) => `${String(i + 1).padStart(2, "0")}.jpg`)],
     imageCount: 11,
   },
   {
@@ -328,7 +328,7 @@ export const projects: Project[] = [
     location: "Trenčín - Lavičková ul.",
     year: "2013",
     scope: "osekanie obkladu a dlažieb, vodoinštalácia, elektroinštalácia, vyrovnanie stien omietkou, nalepenie obkladu a dlažieb, osadenie sanitárneho vybavenia",
-    images: ["HLAVNA.jpg", ...Array.from({ length: 6 }, (_, i) => `${i + 1}.jpg`)],
+    images: ["6.jpg", "HLAVNA.jpg", ...Array.from({ length: 5 }, (_, i) => `${i + 1}.jpg`)],
     imageCount: 6,
   },
   {
@@ -338,7 +338,7 @@ export const projects: Project[] = [
     location: "Trenčín - Ulica Mateja Bela",
     year: "2013",
     scope: "demontáž bytového jadra, vymurovanie jadra, vodoinštalácia, elektroinštalácia, zhotovenie murovaného sprchového kúta, nalepenie obkladov a dlažieb, omietky, maliarske práce, zníženie stropov sadrokartónom, osadenie sanitárneho vybavenia, montáž obložkových zárubní",
-    images: ["HLAVNA.jpg", ...Array.from({ length: 10 }, (_, i) => `${i + 1}.jpg`)],
+    images: ["10.jpg", "HLAVNA.jpg", ...Array.from({ length: 9 }, (_, i) => `${i + 1}.jpg`)],
     imageCount: 10,
   },
   {
@@ -378,7 +378,7 @@ export const projects: Project[] = [
     location: "Opatovce",
     year: "2013",
     scope: "búracie práce, elektroinštalácia, vodoinštalácia, murárske práce, nalepenie obkladov a dlažieb, montáž sanitárneho vybavenia",
-    images: ["HLAVNA.jpg", ...Array.from({ length: 7 }, (_, i) => `${String(i + 1).padStart(2, "0")}.jpg`)],
+    images: ["07.jpg", "HLAVNA.jpg", ...Array.from({ length: 6 }, (_, i) => `${String(i + 1).padStart(2, "0")}.jpg`)],
     imageCount: 7,
   },
   {
@@ -398,7 +398,7 @@ export const projects: Project[] = [
     location: "Trenčianska Turná - Beckovská ul.",
     year: "2013",
     scope: "omietnutie stien, murárske práce, výmena okna, nivelovanie podláh, nalepenie obkladov a dlažieb, osadenie sanitárneho vybavenia",
-    images: ["HLAVNA.jpg", ...Array.from({ length: 6 }, (_, i) => `${i + 1}.jpg`)],
+    images: ["6.jpg", "HLAVNA.jpg", ...Array.from({ length: 5 }, (_, i) => `${i + 1}.jpg`)],
     imageCount: 6,
   },
   {
@@ -429,7 +429,7 @@ export const projects: Project[] = [
     location: "Trenčín - Východná ul.",
     year: "2012",
     scope: "búracie práce, obklady, dlažby, vodoinštalácia, elektroinštalácia, zníženie podhľadu, osadenie sanitárneho vybavenia",
-    images: ["HLAVNA.jpg", ...Array.from({ length: 8 }, (_, i) => `${i + 1}.jpg`)],
+    images: ["8.jpg", "HLAVNA.jpg", ...Array.from({ length: 7 }, (_, i) => `${i + 1}.jpg`)],
     imageCount: 8,
   },
   {
