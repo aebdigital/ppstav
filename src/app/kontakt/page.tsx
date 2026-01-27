@@ -10,7 +10,6 @@ export default function KontaktPage() {
     name: "",
     phone: "",
     email: "",
-    subject: "",
     message: "",
     consent: false,
   });
@@ -56,7 +55,6 @@ export default function KontaktPage() {
           name: "",
           phone: "",
           email: "",
-          subject: "",
           message: "",
           consent: false,
         });
@@ -344,43 +342,7 @@ export default function KontaktPage() {
                   />
                 </div>
 
-                <div>
-                  <label
-                    htmlFor="subject"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Predmet
-                  </label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
-                  >
-                    <option value="">Vyberte predmet</option>
-                    <option value="kompletna-rekonstrukcia">
-                      Kompletná rekonštrukcia bytov
-                    </option>
-                    <option value="kupelne-jadra">
-                      Rekonštrukcia kúpeľní a bytových jadier
-                    </option>
-                    <option value="elektro-vodo-plyn">
-                      Elektrina, voda a plyn
-                    </option>
-                    <option value="murarske-stavebne">
-                      Murárske a stavebné práce
-                    </option>
-                    <option value="malovanie-obklady">
-                      Maľovanie, obklady a podlahy
-                    </option>
-                    <option value="montaz-dveri">Montáž dverí a zariadení</option>
-                    <option value="upratovanie-odvoz">
-                      Upratovanie a odvoz odpadu
-                    </option>
-                    <option value="ine">Iné</option>
-                  </select>
-                </div>
+
 
                 <div>
                   <label
