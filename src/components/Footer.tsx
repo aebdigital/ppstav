@@ -131,7 +131,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/sluzby/malovanie-obklady"
+                  href="/sluzby/malovanie-obklady-podlahy"
                   className="hover:text-red-500 transition-colors"
                 >
                   Maľovanie, obklady a podlahy
@@ -139,7 +139,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/sluzby/montaz-dveri"
+                  href="/sluzby/montaz-dveri-zariadeni"
                   className="hover:text-red-500 transition-colors"
                 >
                   Montáž dverí a zariadení
