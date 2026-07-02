@@ -48,6 +48,5 @@ export interface ContactInfo {
   social: {
     facebook: string;
     instagram: string;
-    tiktok: string;
   };
 }

@@ -113,7 +113,6 @@ export default function RootLayout({
     sameAs: [
       "https://www.facebook.com/ppstavsk",
       "https://www.instagram.com/ppstav_poruban/",
-      "https://www.tiktok.com/@ppstav",
     ],
   };
 

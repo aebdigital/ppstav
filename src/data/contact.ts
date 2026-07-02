@@ -18,7 +18,6 @@ export const contactInfo: ContactInfo = {
   social: {
     facebook: "https://www.facebook.com/ppstavsk",
     instagram: "https://www.instagram.com/ppstav_poruban/",
-    tiktok: "https://www.tiktok.com/@ppstav",
   },
 };
 
